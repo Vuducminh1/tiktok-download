@@ -7,6 +7,7 @@ import { ArrowRight, CheckCircle, Smartphone, Zap, Music, Link2, Loader2, AlertC
 import ResultCard from './components/Downloader/ResultCard';
 import ChannelCard from './components/Downloader/ChannelCard';
 import { translations } from './utils/translations';
+import AuthPage from './components/Auth/AuthPage.tsx';
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -19,6 +20,7 @@ function App() {
   const [videoResult, setVideoResult] = useState<VideoData | null>(null);
   const [channelResult, setChannelResult] = useState<ChannelData | null>(null);
 
+  const [currentView, setCurrentView] = useState<'home' | 'login'>('home');
   const t = translations[lang];
 
   // Theme Toggling
@@ -85,9 +87,17 @@ function App() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Navbar isDarkMode={isDarkMode} toggleTheme={toggleTheme} lang={lang} setLang={setLang} />
+      <Navbar 
+        isDarkMode={isDarkMode} 
+        toggleTheme={toggleTheme} 
+        lang={lang} 
+        setLang={setLang}
+        onNavigate={setCurrentView}
+      />
       
-      <main className="flex-grow">
+      <main className="flex-grow flex flex-col">
+        {currentView === 'home' ? (
+            <>
         
         {/* Hero Section */}
         <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
@@ -197,6 +207,10 @@ function App() {
                 />
             </div>
             </section>
+       )}
+            </>
+        ) : (
+            <AuthPage lang={lang} onNavigateHome={() => setCurrentView('home')} />
         )}
 
       </main>

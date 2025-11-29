@@ -1,5 +1,4 @@
 import { Language } from '../types';
-
 export const translations = {
   en: {
     nav: {
@@ -7,7 +6,7 @@ export const translations = {
       douyin: 'Douyin Downloader',
       tiktok: 'TikTok Downloader',
       api: 'API Docs',
-      getStarted: 'Get Started'
+      logIn: 'Login'
     },
     hero: {
       titleStart: 'Download',
@@ -52,6 +51,22 @@ export const translations = {
       f4Title: 'Unlimited & Fast',
       f4Desc: 'No speed limits, no download caps. Enjoy lightning fast processing completely free.'
     },
+    auth: {
+      welcomeBack: 'Welcome Back',
+      createAccount: 'Create Account',
+      signInDesc: 'Enter your credentials to access your account.',
+      signUpDesc: 'Sign up for free and start downloading unlimited videos.',
+      email: 'Email Address',
+      password: 'Password',
+      username: 'Username',
+      confirmPassword: 'Confirm Password',
+      signInBtn: 'Sign In',
+      signUpBtn: 'Sign Up',
+      noAccount: "Don't have an account?",
+      haveAccount: 'Already have an account?',
+      or: 'Or continue with',
+      forgotPass: 'Forgot password?'
+    },
     footer: {
       desc: 'The fastest way to download TikTok & Douyin videos without watermark. High quality, free, and unlimited.',
       products: 'Products',
@@ -70,7 +85,7 @@ export const translations = {
       douyin: 'Tải Douyin',
       tiktok: 'Tải TikTok',
       api: 'Tài liệu API',
-      getStarted: 'Bắt đầu ngay'
+      logIn: 'Đăng nhập'
     },
     hero: {
       titleStart: 'Tải Video',
@@ -114,6 +129,22 @@ export const translations = {
       f3Desc: 'Hoạt động mượt mà trên iPhone, Android, MacOS và Windows, không cần cài app.',
       f4Title: 'Không giới hạn',
       f4Desc: 'Không giới hạn tốc độ, không giới hạn số lượng. Hoàn toàn miễn phí.'
+    },
+    auth: {
+      welcomeBack: 'Chào mừng trở lại',
+      createAccount: 'Tạo tài khoản mới',
+      signInDesc: 'Nhập thông tin xác thực để truy cập tài khoản của bạn.',
+      signUpDesc: 'Đăng ký miễn phí để bắt đầu tải video không giới hạn.',
+      email: 'Địa chỉ Email',
+      username: 'Tên đăng nhập',
+      password: 'Mật khẩu',
+      confirmPassword: 'Xác nhận mật khẩu',
+      signInBtn: 'Đăng nhập',
+      signUpBtn: 'Đăng ký',
+      noAccount: "Chưa có tài khoản?",
+      haveAccount: 'Đã có tài khoản?',
+      or: 'Hoặc tiếp tục với',
+      forgotPass: 'Quên mật khẩu?'
     },
     footer: {
       desc: 'Cách nhanh nhất để tải video TikTok & Douyin không logo. Chất lượng cao, miễn phí và không giới hạn.',
